@@ -624,7 +624,6 @@ GameObject:
   m_Component:
   - component: {fileID: 691549167}
   - component: {fileID: 691549166}
-  - component: {fileID: 691549165}
   m_Layer: 0
   m_Name: "Camera - \u9078\u55AE\u982D\u50CF"
   m_TagString: Untagged
@@ -632,14 +631,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &691549165
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 691549164}
-  m_Enabled: 1
 --- !u!20 &691549166
 Camera:
   m_ObjectHideFlags: 0
@@ -1233,7 +1224,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: c5997e7231b08ce4d90222d42100a8e7, type: 3}
+    m_Font: {fileID: 12800000, guid: e93332be69c2efa4b8a1dde2fafeb2d3, type: 3}
     m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
