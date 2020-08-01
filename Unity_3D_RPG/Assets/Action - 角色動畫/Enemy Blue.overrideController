@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Enemy Blue
+  m_Controller: {fileID: 9100000, guid: 92b674397338ea14dbd40891239dd017, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 990ba29633b969b4c8879c31b4fefb83,
+      type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 990ba29633b969b4c8879c31b4fefb83,
+      type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 2879a60b5e936214487ccbcb88d87ccf,
+      type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 2879a60b5e936214487ccbcb88d87ccf,
+      type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: c347180ff26d5d14789c8fcbbf1d397c,
+      type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: c347180ff26d5d14789c8fcbbf1d397c,
+      type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 2995ece2aeb29964e9569987d2d300d1,
+      type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 2995ece2aeb29964e9569987d2d300d1,
+      type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 6e4153b50361ebf4db2cb395460c98c5,
+      type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 6e4153b50361ebf4db2cb395460c98c5,
+      type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 06392a2a4de07424f8e4d8f798777856,
+      type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 06392a2a4de07424f8e4d8f798777856,
+      type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 7a35daafe995cbc43b82c6a177529210,
+      type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 7a35daafe995cbc43b82c6a177529210,
+      type: 3}
+  - m_OriginalClip: {fileID: -203655887218126122, guid: 63ee3cb9556890b40906415244ee6553,
+      type: 3}
+    m_OverrideClip: {fileID: -203655887218126122, guid: 63ee3cb9556890b40906415244ee6553,
+      type: 3}
