@@ -2,12 +2,12 @@
 
 public class LearnLoop : MonoBehaviour
 {
+    // 基礎用
     // 範例用整數
     public int J = 1;
     public int K = 3;
 
     // 延伸用
-
     // 立方體物件指定區
     public Transform cube;
 
@@ -67,7 +67,7 @@ public class LearnLoop : MonoBehaviour
 
         // 自主練習 延伸再延伸
 
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < -10; i--)
         {
             //給出一個三維座標，來指定方塊生成的位置， pos為簡寫，可自訂義。
             Vector3 pos = new Vector3(i, i, i);

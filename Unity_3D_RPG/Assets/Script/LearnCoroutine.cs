@@ -57,6 +57,7 @@ public class LearnCoroutine : MonoBehaviour
 
     //基礎延伸開始
 
+    //巨大化
     public IEnumerator Big()
     {
         for (int i = 0; i < 10; i++)
