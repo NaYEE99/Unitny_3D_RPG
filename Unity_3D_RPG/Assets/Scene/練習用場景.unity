@@ -245,7 +245,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -295,7 +295,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 296290730}
-  m_LocalRotation: {x: 0.17791341, y: -0.7015276, z: 0.6639818, w: 0.18797377}
+  m_LocalRotation: {x: 0.18301274, y: -0.6830127, z: 0.6830127, w: 0.18301274}
   m_LocalPosition: {x: 0, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -516,7 +516,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   timeOfDay: 24
   sun: {fileID: 2011219125}
-  moom: {fileID: 0}
+  moom: {fileID: 296290731}
   orbitSpeed: 0
 --- !u!4 &1234635302
 Transform:
