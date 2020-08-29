@@ -31,7 +31,7 @@ public class CameraControl_1st : MonoBehaviour
     public Transform target;
     [Header("速度"), Range(0, 100)]
     public float speed = 1;
-    [Header("旋轉速度"), Range(0, 100)]
+    [Header("旋轉速度"), Range(10, 1000)]
     public float turn = 1;
     [Header("上下角度限制")]
     public Vector2 limit = new Vector2(-20, 35);
@@ -49,11 +49,11 @@ public class CameraControl_1st : MonoBehaviour
     {
         Vector3 posA = transform.position;                          // 設定 A點為攝影機本身
         Vector3 posB = target.position;                             // 設定 B點為目標
-        
+        posA = Vector3.Lerp(posA, posB, Time.deltaTime * speed);            // A點則為 = (A點往B點逐漸接近)(幾乎同時)
         transform.position = posA;                                  // 設定 攝影機座標為 更新後的A點
 
         // 攝影機旋轉部分
-        rot.x += Input.GetAxis("Mouse Y") * turn;                   // 取得滑鼠上下來控制 X角度
+        rot.x += -Input.GetAxis("Mouse Y") * turn;                   // 取得滑鼠上下來控制 X角度
         rot.y += Input.GetAxis("Mouse X") * turn;                  // 取得滑鼠左右來控制 Y角度
 
         rot.x = Mathf.Clamp(rot.x, limit.x, limit.y);               // 限制 x 在 (-30,35)5 之間

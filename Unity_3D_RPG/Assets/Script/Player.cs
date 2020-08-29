@@ -23,6 +23,13 @@ public class Player : MonoBehaviour
 
     private Transform cam;      // 攝影機根物件
 
+    // 使此欄位在屬性面板上隱藏
+    [HideInInspector]
+    /// <summary>
+    /// 停止使玩家不能移動
+    /// </summary>
+    public bool stop = false;
+
     // 欄位區域結束
     #endregion
 
@@ -44,8 +51,17 @@ public class Player : MonoBehaviour
     // FixUpdate 為官方建議使用，會延遲 Update 一個影格的時間持續執行
     private void FixedUpdate()
     {
+        if (stop == true) return;    // 假設stop啟用，則跳過移動。
+
         Move();     // 呼叫移動
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "能量罐罐") GetProp(collision.gameObject);
+    }
+
 
     // 事件區域結束
     #endregion
@@ -105,9 +121,9 @@ public class Player : MonoBehaviour
     }
 
 
-    private void GetProp()
+    private void GetProp(GameObject prop)
     {
-
+        Destroy(prop);
     }
 
 
