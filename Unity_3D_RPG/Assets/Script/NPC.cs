@@ -20,12 +20,27 @@ public class NPC : MonoBehaviour
     public AudioClip soundPrint;
     [Header("任務區塊")]
     public RectTransform panelMission;
+    [Header("任務數量")]
+    public Text textMission;
+    [Header("傳送門")]
+    public GameObject[] doors;
 
     private AudioSource aud;
     private Animator ani;
     private Player player;
 
+    [Header("任務計數器")]
     public int count;       // 任務計數器
+
+    /// <summary>
+    /// 更新任務文字介面
+    /// </summary>
+    public void UpdateTextMission()
+    {
+        count++;
+        textMission.text = count + " / " + data.count;
+    }
+
 
     /// <summary>
     /// NPC 對話系統
@@ -136,7 +151,10 @@ public class NPC : MonoBehaviour
     /// </summary>
     private void Missioning()
     {
-        if (count >= data.count) data._NPCState = NPCState.Finish;
+        // 數量 >= 設定值時，改NPC狀態為完成任務
+        if (count >= data.count) data._NPCState = NPCState.Finish;  
+        // 迴圈執行：接受任務時，開啟所有傳送門
+        for (int i = 0; i < doors.Length; i++) doors[i].SetActive(true);
     }
 
 }

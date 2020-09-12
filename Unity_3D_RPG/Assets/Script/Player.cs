@@ -20,8 +20,10 @@ public class Player : MonoBehaviour
 
     private Rigidbody rig;
     private Animator ani;
-
+    private AudioSource aud;
     private Transform cam;      // 攝影機根物件
+
+    private NPC npc;
 
     // 使此欄位在屬性面板上隱藏
     [HideInInspector]
@@ -46,7 +48,18 @@ public class Player : MonoBehaviour
         ani = GetComponent<Animator>();         // 抓取 Animator 給此C#使用
 
         cam = GameObject.Find("攝影機根物件").transform;  // 在場景直接搜尋("")中的物件
+
+        aud = GetComponent<AudioSource>();      // 抓取聲音來源
+
+        npc = FindObjectOfType<NPC>();
     }
+
+    // 無物理運算，可放置在Update，不會造成效能負擔
+    private void Update()
+    {
+        Attack();
+    }
+
 
     // FixUpdate 為官方建議使用，會延遲 Update 一個影格的時間持續執行
     private void FixedUpdate()
@@ -99,7 +112,10 @@ public class Player : MonoBehaviour
 
     private void Attack()
     {
-
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            ani.SetTrigger("攻擊觸發");
+        }
     }
 
 
@@ -124,6 +140,8 @@ public class Player : MonoBehaviour
     private void GetProp(GameObject prop)
     {
         Destroy(prop);
+        //aud.PlayOneShot(soundProp);
+        npc.UpdateTextMission();
     }
 
 
